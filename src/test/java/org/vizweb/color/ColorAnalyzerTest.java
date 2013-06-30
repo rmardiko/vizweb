@@ -9,7 +9,6 @@ import java.util.Map;
 import javax.imageio.ImageIO;
 
 import org.junit.Test;
-import com.googlecode.javacv.cpp.opencv_core.CvScalar;
 
 public class ColorAnalyzerTest {
 	
@@ -61,8 +60,8 @@ public class ColorAnalyzerTest {
 						writer.append(d.get(c) + ",");
 					}
 					
-					CvScalar avg = ColorAnalyzer.computeAverageHueSaturationValue(input);
-					writer.append(avg.getVal(0) + "," + avg.getVal(1) + "," + avg.getVal(2) + "\n");
+					double[] avg = ColorAnalyzer.computeAverageHueSaturationValue(input);
+					writer.append(avg[0] + "," + avg[1] + "," + avg[2] + "\n");
 					
 				} catch (IOException ioe) {
 					System.out.println("Failed processing: " + file.getName() 

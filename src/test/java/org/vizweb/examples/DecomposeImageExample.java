@@ -22,8 +22,8 @@ public class DecomposeImageExample {
 	
 	public static void main(String[] args) throws IOException {
 		
-		String inputFileName = "E:/UMD/Research/dataset/english/0.png";
-		String outputFileName = "E:/UMD/Research/dataset/xml/0-png.xml";
+		String inputFileName = "C:/Users/Thinkpad/Downloads/vizweb-test/images/0.png";
+		String outputFileName = "C:/Users/Thinkpad/Downloads/vizweb-test/images/1-png.xml";
 		
 		decomposeSingleImage(inputFileName, outputFileName);
 		

@@ -93,17 +93,20 @@ public class ColorAnalyzer {
 		return n;
 	}
 	
-	static public CvScalar computeAverageHueSaturationValue(BufferedImage input) {
+	static public double[] computeAverageHueSaturationValue(BufferedImage input) {
 		
 		IplImage color = IplImage.createFrom(input);
 		IplImage hsv = IplImage.createCompatible(color);
 		cvCvtColor(color, hsv, CV_BGR2HSV );
 		
-		CvScalar returnValue = cvAvg(hsv,null);
+		CvScalar result = cvAvg(hsv,null);
 		color.release();
 		hsv.release();
 		
 		//CvScalar average = cvAvg(hsv,null);
+		double[] returnValue = {result.getVal(0), 
+				                result.getVal(1), 
+				                result.getVal(2)};
 		
 		return returnValue;
 	}

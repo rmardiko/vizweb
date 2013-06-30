@@ -14,6 +14,10 @@ public class ColorFeatureComputer {
 		return ColorAnalyzer.computeColorDistribution(input);
 	}
 	
+	static public double[] computeAverageHSV(BufferedImage input) {
+		return ColorAnalyzer.computeAverageHueSaturationValue(input);
+	}
+	
 	// Compute the colorfulness using the first method
 	static public double computeColorfulness(BufferedImage input) throws IOException {
 		return ColorAnalyzer.computeColorfulness(input);

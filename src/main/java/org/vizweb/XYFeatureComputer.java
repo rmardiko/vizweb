@@ -177,6 +177,9 @@ public class XYFeatureComputer {
 	}
 	
 	public static int computeTextArea(Block root) {
+		
+		// remove the leaves that are not text
+		
 		return XYFeatureComputer.computeTextAreaRecursive(root);
 	}
 	

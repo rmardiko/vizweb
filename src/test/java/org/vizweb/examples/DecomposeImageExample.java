@@ -22,8 +22,10 @@ public class DecomposeImageExample {
 	
 	public static void main(String[] args) throws IOException {
 		
-		String inputFileName = "C:/Users/Thinkpad/Downloads/vizweb-test/images/0.png";
-		String outputFileName = "C:/Users/Thinkpad/Downloads/vizweb-test/images/1-png.xml";
+		//String inputFileName = "C:/Users/Thinkpad/Downloads/vizweb-test/images/0.png";
+		//String outputFileName = "C:/Users/Thinkpad/Downloads/vizweb-test/images/1-png.xml";
+		String inputFileName = "src/test/resources/yan-9.png";
+		String outputFileName = "src/test/resources/output.xml";
 		
 		decomposeSingleImage(inputFileName, outputFileName);
 		
@@ -68,6 +70,8 @@ public class DecomposeImageExample {
 		//rootWithTextdetected.filterOutSmallBlocks();
 		
 		rootWithTextdetected.toXML(inputFileName, outputFileName);
+		//rootWithTextdetected.toImage(inputImage);
+		ImageIO.write(rootWithTextdetected.toImage(inputImage), "png", new File("src/test/resources/output.png"));
 	}
 	
 	public static void decomposeImageSet(String inputDir, String outputDir) {

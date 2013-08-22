@@ -23,7 +23,6 @@ public class Block {
 	private Block parent = null;
 	private BackgroundModel backgroundModel;
 	private int numForegroundPixels;
-	private boolean isTextBlock;
 	private BlockType type;
 	
 	public static final int MINIMUM_AREA = 10;
@@ -78,8 +77,9 @@ public class Block {
 	public boolean isText(){
 		
 		// removing children, optional
-		if (this.isTextBlock && children.size() != 0)
+		if (this.isTextBlock() && children.size() != 0) {
 			children.clear();
+		}
 		
 		return isTextBlock();
 	}

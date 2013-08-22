@@ -1,7 +1,6 @@
 package org.vizweb;
 
 import java.awt.image.BufferedImage;
-import java.io.IOException;
 import java.util.Map;
 
 import org.vizweb.color.ColorAnalyzer;
@@ -19,12 +18,12 @@ public class ColorFeatureComputer {
 	}
 	
 	// Compute the colorfulness using the first method
-	static public double computeColorfulness(BufferedImage input) throws IOException {
+	static public double computeColorfulness(BufferedImage input)  {
 		return ColorAnalyzer.computeColorfulness(input);
 	}
 	
 	// The second method for computing colorfulness
-	static public double computeColorfulness2(BufferedImage input) throws IOException {
+	static public double computeColorfulness2(BufferedImage input) {
 		return ColorAnalyzer.computeColorfulness2(input);
 	}
 }

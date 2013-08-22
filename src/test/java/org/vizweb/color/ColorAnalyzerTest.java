@@ -13,14 +13,15 @@ import org.junit.Test;
 public class ColorAnalyzerTest {
 	
 
-	//@Test
+	@Test
 	public void testComputeColorDistribution() throws IOException{
 		
-		BufferedImage input = ImageIO.read(new File("src/test/resources/awn.png"));
+		BufferedImage input = ImageIO.read(new File("src/test/resources/yan-6.png"));
 		Map<NamedColor, Double> d = ColorAnalyzer.computeColorDistribution(input);
 		for (NamedColor c : d.keySet()){			
-			System.out.println(" " + c.getName() + ":" + d.get(c));			
+			System.out.println(" " + c.getName() + ":" + d.get(c));
 		}
+		
 	}
 	
 	//@Test
@@ -92,7 +93,7 @@ public class ColorAnalyzerTest {
 		System.out.println(ColorAnalyzer.computeColorfulness2(input));
 	}
 	
-	@Test
+	//@Test
 	public void testComputeColorfulnessFromDataset() {
 		
 		File folder = new File("E:/UMD/Research/dataset/wot1000");

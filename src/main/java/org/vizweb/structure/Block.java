@@ -33,6 +33,15 @@ public class Block {
 		type = BlockType.Unknown;
 	}
 	
+	public Block(Block other) {
+		this.bounds = other.bounds;
+		this.parent = other.parent;
+		this.backgroundModel = other.backgroundModel;
+		this.numForegroundPixels = other.numForegroundPixels;
+		this.type = other.type;
+		this.children.addAll(other.children);
+	}
+	
 	public BlockType getType() {
 		return type;
 	}
@@ -166,6 +175,22 @@ public class Block {
 		
 		// down to the children
 		for (Block c : children) c.filterOutSmallBlocks();
+	}
+	
+	public void removeChildrenOfTextBlocks() {
+		
+		if (this.isLeaf()) {
+			return;
+		}
+		
+		if (this.isTextBlock()) {
+			children.clear();
+		}
+		else {
+			// down to the children
+			for (Block c : children) c.removeChildrenOfTextBlocks();
+		}
+		
 	}
 
 	public boolean isTextBlock() {

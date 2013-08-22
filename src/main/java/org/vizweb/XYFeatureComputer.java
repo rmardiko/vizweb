@@ -23,6 +23,7 @@ public class XYFeatureComputer {
 		
 		XYTextDetector td = new XYTextDetector(root,input);
 		Block rootWithTextdetected = td.detect();
+		rootWithTextdetected.removeChildrenOfTextBlocks();
 		
 		return rootWithTextdetected;
 	}
@@ -176,10 +177,8 @@ public class XYFeatureComputer {
 		}
 	}
 	
+	// NOTE: this method assumes the text are on the leaves
 	public static int computeTextArea(Block root) {
-		
-		// remove the leaves that are not text
-		
 		return XYFeatureComputer.computeTextAreaRecursive(root);
 	}
 	

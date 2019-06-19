@@ -61,4 +61,4 @@ System.out.println("Horizontal Symmetry: " + QuadtreeFeatureComputer.computeHori
 ```
 
 # Contact
-Please send any feedback or question to mardiko at cs dot umd dot edu. Thanks!
+Please send any feedback or question to mardiko at gmail dot com. Thanks!

@@ -1,6 +1,8 @@
 # Welcome
 
-Thanks for your interest in our work!
+This is the code to produce Web aesthetic scores as described in the paper:
+
+K Reinecke, T Yeh, L Miratrix, R Mardiko, Y Zhao, J Liu, KZ Gajos  (2013). [Predicting users' first impressions of website aesthetics with a quantification of perceived visual complexity and colorfulness](https://dash.harvard.edu/bitstream/handle/1/12561368/Predicting%20Users%20First%20Impressions.pdf?sequence=1&isAllowed=y) In proceedings of CHI'13.
 
 # Prerequisite
 
